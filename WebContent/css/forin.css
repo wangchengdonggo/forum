@@ -1,0 +1,56 @@
+#news {
+	border-radius:10px;
+	float:right;
+	margin: 20px 20px 0px  0px;
+	height:340px;
+	width:29%;
+	background:#fff;
+	padding:20px;
+}
+#con {
+	border-radius:10px;
+  float:left;
+	background:#fff;
+	margin:20px;
+	height:auto;
+	width:995px;
+	padding:20px;
+}
+#zxf {
+	
+}
+#zxh {
+}
+#hot {
+	font-family:"Microsoft YaHei";
+	border: 1px solid #EDEDED;
+	width:auto;
+	float:left;
+
+}
+#hot p{
+	color:#fff;
+	padding-left:20px;
+	line-height:40px;
+	font-size:20px;
+	background-color:#3385FF;
+}
+#hot ul {
+	margin:0 20px 20px 20px;
+	font-size:15px;
+	width:270px;
+}
+#hot ul a{
+	color:#7A7A7A;
+}
+#hot ul a:hover{
+	color:#EE7942;
+}
+#hot li {
+	line-height:30px;
+	float:left;
+}
+#hot em {
+	float:right;
+	line-height:30px;
+}

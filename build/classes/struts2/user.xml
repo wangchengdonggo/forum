@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="forum" extends="struts-default">
+		<!-- 注册时的action -->
+		<action name="register" class="com.forum.action.RegisterAction"
+			method="execute">
+			<result name="sucess">home.jsp</result>
+			<result name="fail">register.jsp</result>
+		</action>
+		<!-- home登录时的action -->
+		<action name="loginaction" class="com.forum.action.LoginAction"
+			method="execute">
+			<result name="sucess">home.jsp</result>
+			<result name="fail">register.jsp</result>
+		</action>
+
+		<!-- forum登录时的action -->
+		<action name="loginaction1" class="com.forum.action.LoginAction"
+			method="execute">
+			<result name="sucess">forum.jsp</result>
+			<result name="fail">register.jsp</result>
+		</action>
+
+		<!-- home处退出登录的action -->
+		<action name="loginoutaction" class="com.forum.action.LoginoutAction"
+			method="execute">
+			<result name="sucess">home.jsp</result>
+		</action>
+		<!-- forum处退出的action -->
+		<action name="loginoutaction1" class="com.forum.action.LoginoutAction"
+			method="execute">
+			<result name="sucess">forum.jsp</result>
+		</action>
+		<!-- 处理注册时username的ajax -->
+		<action name="originAjax" class="com.forum.action.BookAction"
+			method="usernameAjax">
+		</action>
+		<!-- 处理注册时email的ajax -->
+		<action name="emailAjax" class="com.forum.action.BookAction"
+			method="emailAjax">
+		</action>
+
+	</package>
+</struts>

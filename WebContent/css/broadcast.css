@@ -1,0 +1,58 @@
+#position {
+	font-family:"Microsoft YaHei";
+	border-radius:10px;
+	margin: 20px 20px 20px 20px;
+	height:40px;
+	width:1035px;
+	float:left;
+	background:#fff;
+}
+#position p {
+	padding-left:20px;
+	line-height:35px;
+	color:#474747;
+	font-weight:bold;
+}
+#cont {
+	border-radius:10px;
+	width:1000px;
+	float:left;
+	margin:0 0 10px 20px;
+	background:#fff;
+	padding:20px;
+}
+#photo {
+	float:left;
+}
+#photo img {
+	width:400px;
+	height:270px;
+}
+#newss {
+	margin:0 0 0 30px;
+	float:left;
+	width:550px;
+}
+#newss p {
+	background:#EDEDED;
+	font: bold 23px "Microsoft YaHei";
+	line-height:30px;
+	margin-bottom:15px;
+	margin-top:10px;
+}
+#newss article {
+	font-family:"Microsoft YaHei";
+	text-indent:2em;
+	font: normal 17px Georgia,serif;
+	line-height:25px;
+	
+}
+#newss article p {
+	background:none;
+	font-family:"Microsoft YaHei";
+	text-indent:2em;
+	font: normal 17px Georgia,serif;
+	line-height:25px;
+	
+}
+

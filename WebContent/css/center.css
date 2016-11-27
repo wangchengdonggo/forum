@@ -1,0 +1,104 @@
+#position {
+	font-family:"Microsoft YaHei";
+	border-radius:10px;
+	margin: 20px 20px 0 20px;
+	height:40px;
+	width:1035px;
+	float:left;
+	background:#fff;
+}
+#position p {
+	padding-left:20px;
+	line-height:35px;
+	color:#474747;
+	font-weight:bold;
+}
+#inf {
+	border-radius:10px;
+	margin: 20px 20px 0 20px;
+	height:300px;
+	width:200px;
+	float:left;
+	background:#fff;
+}
+#logo {
+	margin: 20px 20px 0 20px;
+	height:150px;
+	width:150px;
+}
+#oinf {
+	margin: 20px 15px 0 20px;
+	height:100px;
+	width:150px;
+}
+#oinf p {
+	line-height:60px;
+	font-size:20px;
+	text-align:center;
+}
+#oinf a {
+	font-size:15px;
+	letter-spacing:1px;
+	text-align:center;
+	color:gray;
+}
+#infm {
+	padding:30px;
+	border-radius:10px;
+	background:#fff;
+	margin: 20px 20px 20px 0px;
+	width:740px;
+	float:right;
+}
+#infma {
+
+	float:left;
+	border: 1px solid #EDEDED;
+	border-radius:10px;
+	width:370px;
+	height:400px;
+	
+}
+#infma p,#cus p,#dyn p {
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	line-height:50px;
+	font-weight:bold;
+	padding-left:10px;
+	background-color:#EDEDED;
+	letter-spacing:4px;
+}
+#infma table {
+	width:100%;
+	height:350px;
+	font: bold 15px "Microsoft YaHei";
+}
+.f {
+	width:200px;
+	padding-left:50px;
+	color:gray;
+}
+.r {
+	padding-right:30px;
+	text-align:right;
+	width:100px;
+}
+
+#cus {
+	border-radius:10px;
+	margin-left:50px;
+	float:left;
+	border: 1px solid #EDEDED;
+	width:250px;
+	height:400px;
+	
+}
+ 
+#dyn {
+	border-radius:10px;
+	float:left;
+	border: 1px solid #EDEDED;
+	width:90%;
+	height:200px;
+	margin-top:50px;
+}

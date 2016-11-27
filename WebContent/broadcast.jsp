@@ -1,0 +1,156 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page
+	import="java.util.*,com.forum.bean.Posts,com.forum.dao.PostsDaoHB" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=uft-8">
+		<title> 双体论坛 </title>
+		<link rel="stylesheet" type="text/css" href="css/for.css" />
+		<link rel="stylesheet" type="text/css" href="css/broadcast.css" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+				$(document).ready(function(){
+					var topMain=$("#header").height();
+					var logo=$("#m_bd");
+					$(document).scroll(function(){
+						if($(window).scrollTop()>topMain){
+							logo.addClass("sc");
+						}else{
+							logo.removeClass("sc");
+						}
+					});
+				});
+    </script>
+	</head>
+	<body>
+		<div class="theme-popover">
+     <div class="theme-poptit">
+     	<a href="javascript:;" title="关闭" class="close">×</a>
+      <h3>  欢 &nbsp 迎 &nbsp 登 &nbsp 录</h3>
+     </div>
+     <div class="log_lg">
+     	<img src="img/st1.png" alt="双体系" title="title" />
+     </div>
+     <div class="log_bd">
+     	<form class="fm"action="loginaction1" method="post" name="login">
+					
+			 <p style="margin:30px auto;position: relative;">
+			 	<span class="u_logo"></span>
+			 	<input class="inpt" id="username" name="username" type="text" placeholder="请输入用户名或邮箱" value=""/> 
+   		 </p>
+			 <p style="position: relative;margin:30px auto;">
+			  <span class="p_logo"></span>         
+			  <input class="inpt" id="password" name="password" type="password" placeholder="请输入密码" value=""/>
+			 </p>
+			 <input class="logbt" type="submit" value="登&nbsp&nbsp&nbsp&nbsp录" /><br/>
+			 <a href="register.jsp"> 没有帐号，立即注册 </a>
+			</form>
+
+     </div>
+    </div>
+		<% String username = (String) session.getAttribute("username"); %>
+
+		<div id="header">
+			<div id="h_bd">
+				<img src="img/st2.png" alt="双体论坛" title="双体论坛" />
+					<%
+					if (username == null) {
+				%>
+					<p id="h_b">
+					<a class="theme-login" href="javascript:;">登录</a>
+	        <span>|</span>
+					<a href="register.jsp">注册 </a>
+				</p>
+				<%} else {%>
+				
+				   <p id="h_b">
+					<font size=4.5px;>&nbsp;&nbsp;您好：&nbsp;<%=username%>&nbsp;&nbsp;
+					</font> <a href="loginoutaction1"><font size=4.5px;
+						>退出</a></font>
+				</p>
+					<%}%>
+				<p id="h_c"> —— 让沟通无限可能 </p>
+			</div>
+		</div>
+		<div class="menu">
+			<div id="m_bd">
+				<ul>
+					<li> <a href="forum.jsp"> 首页 </a></li>
+					<li> <a href="board.jsp"> 版块 </a></li>
+					<li style="background-color:#0938F7"><a href="broadcast.jsp"> 广播 </a></li>
+					<li> <a href="center.jsp"> 个人中心 </a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div id="con_bd">
+				<div id="position"><p> 当前位置 : 广播</p></div>
+					<div id="cont">
+					<div id="photo">
+					<img src="img/1.png" alt="alt" title="title" />
+					</div>
+					<div id="newss">
+						<p>难忘是你我纯洁的友情！今年的生日，我们一起过！</p>
+						<article> 等四大护法后送到路口附近哈坎松等级划分刻录机啊绥芬河
+							洒落的空间发挥绿卡时间的发挥空间阿萨德恢复了快接啊山东龙口放假。
+						</article>
+					</div>
+				</div>
+				<div id="cont">
+					<div id="photo">
+					<img src="img/2.png" alt="alt" title="title" />
+					</div>
+					<div id="newss">
+						<p>“体坛风云” 你我在这里与软件相约！！</p>
+						<article> 等四大护法后送到路口附近哈坎松等级划分刻录机啊绥芬河
+							洒落的空间发挥绿卡时间的发挥空间阿萨德恢复了快接啊山东龙口放假。
+						</article>
+					</div>
+				</div>
+				
+				
+				
+				
+				<div id="cont">
+					<div id="photo">
+					<img src="img/3.png" alt="alt" title="title" />
+					</div>
+					<div id="newss">
+						<p>烧烤！吃货们的福利！哈哈！！</p>
+						<article> 等四大护法后送到路口附近哈坎松等级划分刻录机啊绥芬河
+							洒落的空间发挥绿卡时间的发挥空间阿萨德恢复了快接啊山东龙口放假。
+						</article>
+					</div>
+				</div>
+				
+				<%
+						PostsDaoHB postsdao=new PostsDaoHB();
+						List<Posts> list = postsdao.queryPosts();
+						for (int i = 0; i < list.size(); i++) {
+							Posts posts=list.get(i);
+						%>
+				<div id="cont">
+					<div id="photo">
+					<img src="img/1.png" alt="alt" title="title" />
+					</div>
+					<div id="newss">
+						<p><%=posts.getTitle()%></p>
+						<article> <%=posts.getContent()%>
+						</article>
+					</div>
+				</div>
+				
+				<%} %>
+				<div style="clear:both;"></div>
+			</div>
+			<div style="clear: both;display: block"> </div>
+		</div>
+		<div style="clear: both;display: block"> </div>
+		<div id="footer">
+			<p> Copyright ©2015 双体系卓越人才教育基地 </p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,138 @@
+#position {
+	font-family:"Microsoft YaHei";
+	border-radius:10px;
+	margin: 20px 20px 0 20px;
+	height:40px;
+	width:1035px;
+	float:left;
+	background:#fff;
+}
+#position p {
+	padding-left:20px;
+	line-height:35px;
+	color:#474747;
+	font-weight:bold;
+}
+.module {
+	float:left;
+	border-radius:10px;
+	margin: 20px 20px 0 20px;
+	width:1035px;
+	background:#fff;	
+}
+#inf {
+	border-radius:10px;
+  height:auto;
+	width:210px;
+	float:left;
+
+}
+#logo {
+	margin: 30px;
+	height:150px;
+	width:150px;
+}
+#oinf {;
+	margin: 30px;
+	height:100px;
+	width:150px;
+}
+#oinf p {
+	font-size:20px;    
+	line-height:25px;    
+	text-align:center;
+}
+#oinf a {
+	color:gray;
+}
+#oinf a:hover {
+	color:#FF8C69;
+}
+#infm {
+	padding:30px;
+	border-radius:10px;
+	background:#fff;
+	width:760px;
+	float:left;
+}
+.atitle p {
+  float:left;
+  font:800 25px 'Microsoft Yahei','Hei',Tahoma,'SimHei',sans-serif;
+}
+.atitle {
+	height:40px;
+}
+.article{
+	float:left;
+	width:auto;
+	margin:20px 0 0 0;
+	line-height:25px;
+	letter-spacing:1px;
+	text-align:left;
+	font:500 15px 'Microsoft Yahei','Hei',Tahoma,'SimHei',sans-serif;;
+	line-height:25px;
+	letter-spacing:1px;
+}
+.article article p {
+
+	font:500 15px 'Microsoft Yahei','Hei',Tahoma,'SimHei',sans-serif;;
+	line-height:25px;
+	letter-spacing:1px;
+}
+.reply {
+	width:750px;
+	border-top:1px dashed gray;
+	position:relative;
+	float:right;
+	padding:20px 20px 10px 10px;
+	bottom:5px;
+	margin-right:20px;
+}
+.reply span {
+	letter-spacing:1px;
+	line-height:20px;
+}
+.reply a{
+	color:gray;
+	font-size:15px;
+}
+.reply a:hover{
+	color:#3385FF;
+	font-weight:bold;
+}
+#formm {
+	width:750px;
+
+  margin:20px 20px 20px 240px;
+  padding:30px;
+  background:#fff;
+  border-radius:10px;
+  float:left;
+}
+textarea {
+	border: 1px solid #3385ff;
+	border-radius:10px;
+	width:730px;
+	height:60px;
+	font-size:15px;
+	text-align:left;
+	padding:10px;
+	resize:none;
+	outline:medium;
+	
+}
+.inps {
+	padding:5px;
+	text-align:center;
+	border:none;
+	font-size:17px;
+	font-weight:bold;
+	letter-spacing:1px;
+	color:#fff;
+	background-color: #3385ff;
+	width:85px;
+	height:36px;
+	margin:20px 0 0 0;
+	
+
+}

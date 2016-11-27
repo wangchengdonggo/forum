@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.forum.bean">
+	<!-- name="User"类名     table="user"数据库表名 -->
+	<class name="User" table="user">
+		<!-- id name="iduser" 主键 -->
+		<id name="iduser">
+			<generator class="native"></generator>
+		</id>
+		<property name="username" />
+		<property name="password" />
+		<property name="passwordtrue"/>
+		<property name="email" />
+	    <property name="creatdate" generated="insert" type="java.util.Date"> 
+			<column name="creatdate" sql-type="timestamp" default="CURRENT_DATE" not-null="true" 
+			/> </property>
+
+	</class>
+</hibernate-mapping>  
