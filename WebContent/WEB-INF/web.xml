@@ -72,4 +72,32 @@
     <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
+  
+  
+  
+  
+  <!-- quartz配置 -->
+    　　<servlet>
+		<servlet-name>QuartzInitializer</servlet-name>
+		<servlet-class>
+			org.quartz.ee.servlet.QuartzInitializerServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config-file</param-name>
+			<param-value>/quartz.properties</param-value>
+		</init-param>
+		<init-param>
+			<param-name>shutdown-on-unload</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet> 
+	<!--quartz另一张使用  -->
+	<servlet>
+		<servlet-name>InterRestfulTimeSerclet</servlet-name>
+		<servlet-class>
+			com.quartz.QuartzService
+		</servlet-class>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
 </web-app>
